@@ -173,3 +173,17 @@ def delete_view(request, id):
         return HttpResponseRedirect('/success/')
     
     return render(request, "delete_view.html", context)
+
+def remove_view(request, id):
+    # dictionary for initial data with field names as keys
+    context = {}
+    # fetch the object related to the passed id
+    obj = get_object_or_404(TasksModel, id=id)
+
+    if request.method == "POST":
+        # delete object
+        obj.delete()
+        # OR redirect to success page
+        return HttpResponseRedirect('/success/')
+    
+    return render(request, "delete_view.html", context)

@@ -20,7 +20,7 @@ urlpatterns = [
     path('edit/', views.task_selection),
     path('edit/<id>/', views.edit_view),
     path('remove/', views.task_selection),
-    path('remove/<id>/', views.delete_view),
+    path('remove/<id>/', views.remove_view),
     # homepage
     path('', views.home),
     # success page

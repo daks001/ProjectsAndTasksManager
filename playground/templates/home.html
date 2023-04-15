@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Projects & Tasks Manager</title>
+</head>
+<body>
+    <div class="nav">
+        <h2>Projects & Tasks Manager by Dakshika Srivastava</h2>
+    </div>
+
+    <div class="intro">
+        <h4>This is a demo website for my submission for the TAMU AgriLife Software Application Developer interview.</h4>
+        <h4>This website has been created using Django on the backend. It interacts with the Project and Task databases. You can select from the following options to perform other actions.</h4>
+    </div>
+
+    <form method="POST" name="Add">
+        <!-- Security token by django -->
+        {% csrf_token %}
+        <h4 class="heading">Projects related actions:</h4>
+
+        <div class="container">
+            <table class="tables">
+                <tr>
+                    <th>Action</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="List Projects" name="LIST" class="submits"> <br><br></td>
+                    <td>The "List Projects" option allows you to see a list of all the current projects in the database. This is a quick view, and only shows the project name and description. If you want a detailed view, check the "View Project" option instead.</td>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="View Project" name="VIEW" class="submits"> <br><br></td>
+                    <td>The "View Project" option will let you view the details of whichever project you select. And this selection can be made on the next page, once you click on the button.</td>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="Create Project" name="CREATE" class="submits"> <br><br></td>
+                    <td>The "Create Project" option will let you add a new project to the database.</td>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="Modify Project" name="MODIFY" class="submits"> <br><br></td>
+                    <td>The "Modify Project" option will let you update the information about whichever project you select. And this selection can be made on the next page, once you click on the button.</td>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="Delete Project" name="DELETE" class="submits"> <br><br></td>
+                    <td>The "Delete Project" option will let you delete whichever project you select. And this selection can be made on the next page, once you click on the button.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h4 class="heading">Tasks related actions:</h4>
+        <div class="container">
+            <table class="tables">
+                <tr>
+                    <th>Action</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="List Tasks" name="BULLET" class="submits"> <br><br></td>
+                    <td>The "List Tasks" option allows you to see a list of all the current tasks in the database.</td>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="Create Task" name="NEW" class="submits"> <br><br></td>
+                    <td>The "Create Task" option allows you to add a new task to the database.</td>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="Modify Task" name="EDIT" class="submits"> <br><br></td>
+                    <td>The "Modify Task" option allows you to update the information about whichever task you select. And this selection can be made on the next page, once you click on the button.</td>
+                </tr>
+                <tr>
+                    <td class="button"><input type="submit" value="Delete Task" name="REMOVE" class="submits"> <br><br></td>
+                    <td>The "Delete Task" option will let you delete whichever task you select. And this selection can be made on the next page, once you click on the button.</td>
+                </tr>
+            </table>
+        </div>
+        
+    </form>
+    <br><br>
+</body>
+</html>

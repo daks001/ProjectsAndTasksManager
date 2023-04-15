@@ -1,0 +1,110 @@
+body {
+    font-family: 'Lato', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.intro {
+    padding: 2%;
+}
+
+.nav {
+    padding: 1%;
+    margin: 0;
+    background-color: #0080ff;
+    color: white;
+    text-align: center;
+}
+
+.heading {
+    font-style: italic;
+    padding: 0 2%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.tables {
+    border-collapse: collapse;
+    width: 70%;
+    font-size: 0.8em;
+}
+
+.tables th {
+    background-color: grey;
+    color: white;
+}
+
+.tables td, .tables th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+.tables tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.tables tr:hover {
+    background-color: #ddd;
+}
+
+.button {
+    background-color: #0080ff;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.submits {
+    color: white;
+    font-family: 'Lato', Times, serif;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.submits:hover {
+    color: black;
+    font-weight: bold;
+}
+
+input[type=text], input[type=email], textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+input[type=submit] {
+    /* width: 100%; */
+    background-color: #0080ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+input[type=submit]:hover {
+    color: black;
+}
+  
+.formbody {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.main {
+    margin: 2%;
+    padding: 1%;
+}
